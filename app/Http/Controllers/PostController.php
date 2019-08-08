@@ -9,6 +9,6 @@ class PostController extends Controller
 {
     public function all_posts() {
         $posts = Post::with('user')->get();
-        return $posts;
+        return view('admin.adminmaster');
     }
 }
