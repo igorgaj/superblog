@@ -45,7 +45,7 @@
                             <tr v-for="(category,index) in getallCategory" :key="category.id" role="row" class="odd">
                                 <td class="sorting_1">{{index+1}}</td>
                                 <td>{{category.cat_name}}</td>
-                                <td>{{category.created_at}}</td>
+                                <td>{{category.created_at | timeFormat}}</td>
                                 <td>
                                     <a href="">Edit</a>
                                     <a href="">Delete</a>

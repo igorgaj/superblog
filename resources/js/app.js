@@ -8,6 +8,12 @@ require('./bootstrap');
 require('admin-lte');
 window.Vue = require('vue');
 
+//support for moment.js
+import moment from 'moment';
+Vue.filter('timeFormat', function(arg) {
+    return moment(arg).format('DD MM YYYY');
+});
+
 //vuex
 import Vuex from 'vuex';
 Vue.use(Vuex);
